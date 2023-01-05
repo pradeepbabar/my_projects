@@ -30,3 +30,9 @@ the file will gave its original line endings in your working directory
 - `git remote -v`: looks at all the remote you have
 - `git push <WHERE> <WHAT>`: pushes the <WHAT> branch to <WHERE>
 - `git pull <WHERE> <WHAT>`: pulls the <WHAT> branch in <WHERE> to local computer
+
+## branches
+- `git branches <NAME>`: create branch <NAME> where you are (HEAD)
+- `git switch <NAME>`: move to the branch <NAME>
+- `git checkout <NAME>`: also move to hte branch <NAME>
+- `git switch -c <NAME>`: also create and move to branch <NAme> in 1 command
