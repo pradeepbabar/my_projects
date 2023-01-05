@@ -36,3 +36,6 @@ the file will gave its original line endings in your working directory
 - `git switch <NAME>`: move to the branch <NAME>
 - `git checkout <NAME>`: also move to hte branch <NAME>
 - `git switch -c <NAME>`: also create and move to branch <NAme> in 1 command
+
+##sec_branch added lines
+- `git branches <NAME>`:this comment is from second branch 
