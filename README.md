@@ -17,3 +17,4 @@ git checkout <HASH OR HEAD~> <FILE>`: restore files to <HASH OR HEAD~>
 git checkout <HASH OR HEAD~> if you forget the file, you end up in detach>
 git checkout main`: go back to main
 git switch main : go back to main commit 
+git 
