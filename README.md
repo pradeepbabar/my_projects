@@ -20,3 +20,9 @@ git switch main : go back to main commit
 
 warning: LF will be replaced by CRLF in README.md
 the file will gave its original line endings in your working directory
+
+`git remote add <NAME> <URL>`: adds the <URL> as a remote with the name <Name>
+<NAME> is by convention called origin 
+git remote rm <NAME>: to removes the remote called <NAME>
+git remote -v: looks at all the remote you have
+git push <WHERE> <WHAT>: pushes the <WHAT> branch to <WHERE>
