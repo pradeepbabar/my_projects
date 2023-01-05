@@ -26,3 +26,4 @@ the file will gave its original line endings in your working directory
 git remote rm <NAME>: to removes the remote called <NAME>
 git remote -v: looks at all the remote you have
 git push <WHERE> <WHAT>: pushes the <WHAT> branch to <WHERE>
+- `git pull <WHERE> <WHAT>`: pulls the <WHAT> branch in <WHERE> to local computer
