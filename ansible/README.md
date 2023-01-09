@@ -27,10 +27,10 @@
 - `Ansible Components`: Ansible configuraiton file, Inventory files, Ansible modules, Playbooks
 
 ## Overview of Ansible Components
-- `Ansible requires a control machine to run the Ansible tool.` 
-- `By default, Ansible uses a push model to push changes to remote hosts from the Ansible control machine.` 
-- `The control machine can be any Linux/Unix host with a Python interpreter that supports SSH or the required transport to devices managed by Ansible.` 
-- `Here is an explanation of some of the important components of the Ansible control machine.`
+- Ansible requires a control machine to run the Ansible tool.
+- By default, Ansible uses a push model to push changes to remote hosts from the Ansible control machine.
+- The control machine can be any Linux/Unix host with a Python interpreter that supports SSH or the required transport to devices managed by Ansible. 
+- Here is an explanation of some of the important components of the Ansible control machine.
 
 - `Modules`: typically written in Python. They are typically copied to remote hosts and run by the Ansible tool. Ansible modules are referenced as tasks in Ansible playbooks or using CLI arguments in the Ansible ad-hoc CLI tool.  
 
@@ -43,24 +43,24 @@
 ## Overview of Ansible Inventory Files
 An Ansible control machine requires one or more files that contain an inventory of the hosts to manage. Inventory files contain two basic components; groups and hosts. Group names are enclosed in brackets. The hosts that are listed below the group name belong to that group. The following example shows a basic inventory file that contains two group definitions and three hosts in an INI format:
 
-[sandbox-servers] # A group definition
+- `[sandbox-servers]` # A group definition
 10.10.20.20     # A host in the sandbox-servers group
 
-[nxos-switches] # A group definition
+- `[nxos-switches]` # A group definition
 172.16.30.101   # A host in the nxos-switches group
 172.16.30.102   # A host in the nxos-switches group
 
 To identify a host, use its IP address or a hostname that's DNS can resolve. Also, any host or group can be referenced in a playbook or from the Ansible ad-hoc CLI.
 A host can belong to multiple groups. For example, the following inventory file puts the 10.10.20.20 host in two groups.
 
-[sandbox-servers]
+- `[sandbox-servers]`
 10.10.20.20
 
-[nxos-switches]
+- `[nxos-switches]`
 172.16.30.101
 172.16.30.102
 
-[datacenter-east]
+- `[datacenter-east]`
 10.10.20.20
 
 
