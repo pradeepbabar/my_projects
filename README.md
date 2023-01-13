@@ -36,3 +36,12 @@ the file will gave its original line endings in your working directory
 - `git switch <NAME>`: move to the branch <NAME>
 - `git checkout <NAME>`: also move to hte branch <NAME>
 - `git switch -c <NAME>`: also create and move to branch <NAme> in 1 command
+## Use Rebase to Incorporate changes
+dusra brnach hai from my_branch se:
+Let's say we are working on our main branch & writes commits on new branch as well as main branch during this process we made change to the same line to the same file now we will have a conflict and its resolution is very similar to the process when we had to synchronize our work from our local computer to our remote GitHub.
+
+There are few ways we can fix our conflicts, using a - `git command called rebase`. - `What rebase is doing` is - `rewriting the history of commit`.
+- `git rebase <Branch>`: To incorporate changes from <BRANCH> to current BRANCH.
+
+adding some last end line for branch conflict merge in my_branch section.
+
