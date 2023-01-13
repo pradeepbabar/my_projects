@@ -44,4 +44,5 @@ There are few ways we can fix our conflicts, using a - `git command called rebas
 - `git rebase <Branch>`: To incorporate changes from <BRANCH> to current BRANCH.
 
 adding some last end line for branch conflict merge in my_branch section.
+adding 2nd line in end section in my_branch.
 
