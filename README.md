@@ -31,7 +31,7 @@ the file will gave its original line endings in your working directory
 - `git push <WHERE> <WHAT>`: pushes the <WHAT> branch to <WHERE>
 - `git pull <WHERE> <WHAT>`: pulls the <WHAT> branch in <WHERE> to local computer
 
-## branches
+## BRANCHES
 - `git branches <NAME>`: create branch <NAME> where you are (HEAD)
 - `git switch <NAME>`: move to the branch <NAME>
 - `git checkout <NAME>`: also move to hte branch <NAME>
