@@ -46,5 +46,3 @@ Let's say we are working on our main branch & writes commits on new branch as we
 There are few ways we can fix our conflicts, using a - `git command called rebase`. - `What rebase is doing` is - `rewriting the history of commit`.
 - `git rebase <Other Branch>`: To incorporate changes from <Other BRANCH> to current BRANCH.
 
-in MAIN commit adding 1st line
-2nd line in MAIN commit added for sec
