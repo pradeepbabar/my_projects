@@ -48,3 +48,7 @@ There are few ways we can fix our conflicts, using a - `git command called rebas
 
 trying toc commit change from VS code
 NOw ltes see
+
+again trying to do changes
+in second line as well to see git working
+let see start
