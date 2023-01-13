@@ -47,3 +47,4 @@ There are few ways we can fix our conflicts, using a - `git command called rebas
 - `git rebase <Other Branch>`: To incorporate changes from <Other BRANCH> to current BRANCH.
 
 in MAIN commit adding 1st line
+2nd line in MAIN commit added for sec
