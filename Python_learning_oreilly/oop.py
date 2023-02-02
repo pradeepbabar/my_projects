@@ -7,7 +7,19 @@
 
 # Creating a class doesn't add any functionality or special behavior. 
 # It's just a different way to organize and write the code. 
-# 
+#                                     
+#Robot's attributies:                -> Robot            -> Class Name
+#-Name                               -> Name            |
+#-Version Number                     -> Version_number  | -> Attrubutes
+#-Temprature                         -> temprature      |
+#-Etc
+
+#Robot's functionalities:
+#-Say hi                             -> say_hi()        |
+#-Print internal info                -> print_info()    | -> Methods
+#-initialize its hardware            -> init_hardware() |
+#-Etc
+
 #Create a Python Class
 #For example, to create a class it is very simple, you use the class keyword, and then the name of the class and then colon. 
 # So class keyword name of the class, colon, and for the name of the class, we are going to use a different convention than before
@@ -19,6 +31,8 @@
 #Remember, a class is just a structure, it does nothing by itself. You will need to create some objects, 
 # so you can use the functionalities of the class. And when you create an object from the class, the first thing that is called is the constructor.
 #So the constructor will always be the same def. So you create def, like you just create a function, and then __init__, and then you open parentheses, 
+
+#- `Constructor`
 
 class Robot:
     def __init__(self, name, version_number):
@@ -37,6 +51,9 @@ class Robot:
 #Now that we have the structure of the class, we have the constructor and the attributes, let's implement the methods of the class or in other words, the functionalities of the class. 
 #we have already actually our first method, which is the constructor. 
 # Now we can add any number of methods we want in the class, so still with the indentation to stay inside of the class.
+
+#- `Methods`
+
     def say_hi(self):
         print('Hello my name is' + self.name + 'ready, for help')
 
