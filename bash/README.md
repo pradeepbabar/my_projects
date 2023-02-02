@@ -31,3 +31,30 @@ centos#ls -l
 
 - `Seventh Column` − Represents the file or the directory name.
 
+https://cloud-and-devops.hashnode.dev/linux-for-beginners#heading-file-permissions
+
+Modifying permission via chmod:
+This is used to modify the file permission for Users, Groups and Others
+
+Changing Owner via chown:
+This is used to modify the owner of a file
+
+chown <owner name> <file>
+
+Changing Group via chgrp:
+This is used to modify the group of the file.
+
+chgrp <group name> file
+
+Checking access control lists using getfaclL
+The getfacl command is used on Linux to print a complete listing of all regular permissions and access control lists permissions on a file or directory.
+
+getfacl <file/directory>
+
+Setting access control lists using setfacl:
+The setfacl command is used on Linux to create, modify and remove access control lists on a file or directory.
+
+setfacl {-m, -x} {u, g}:<name>:[r, w, x] <file, directory>
+
+setting
+
