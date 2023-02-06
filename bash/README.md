@@ -58,3 +58,5 @@ setfacl {-m, -x} {u, g}:<name>:[r, w, x] <file, directory>
 
 setting
 
+#cat /etc/shells
+sh -> bourne shell
