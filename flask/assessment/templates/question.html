@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Question</title>
+</head>
+<body>
+    <h1>Question {{ question_index + 1 }}:</h1>
+    <p>{{ question.question }}</p>
+    {% if question.options %}
+    <form method="POST">
+        {% for option in question.options %}
+        <input type="radio" id="{{ option }}" name="answer" value="{{ option }}">
+        <label for="{{ option }}">{{ option }}</label><br>
+        {% endfor %}
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    {% else %}
+    <form method="POST">
+        <textarea name="answer" rows="10" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    {% endif %}
+    <p>Time Left: {{ time_left }} seconds</p>
+</body>
+</html>

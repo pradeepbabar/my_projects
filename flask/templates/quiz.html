@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MCQ Test</title>
+</head>
+<body>
+	<form action="/submit" method="POST">
+		{% for q in questions %}
+			<p>{{ q["question"] }}</p>
+			{% for o in q["options"] %}
+				<input type="radio" name="{{ q["question"] }}" value="{{ o }}"> {{ o }}<br>
+			{% endfor %}
+		{% endfor %}
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
