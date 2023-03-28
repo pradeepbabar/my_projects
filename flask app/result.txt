@@ -1,0 +1,3 @@
+Pradeep,pradeepbabar31@gmail.com,red,['bird'],fsf
+pradeep,pradeep.j.babar@accenture.com,blue,['dog', 'cat', 'bird'],pradeeppradeeppradeeppradeep
+your-full-name,blue,['dog', 'cat', 'bird'],sadsadyour-passwordyour-passwordyour-passwordyour-password
