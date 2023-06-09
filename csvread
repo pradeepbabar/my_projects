@@ -1,0 +1,18 @@
+import csv
+from jinja2 import Environment, FileSystemLoader
+
+# Load the Jinja2 template
+env = Environment(loader=FileSystemLoader('.'))
+template = env.get_template('inventory_template.j2')
+
+# Read data from the CSV file
+with open('hosts.csv', 'r') as file:
+    reader = csv.DictReader(file)
+    hosts = [row for row in reader]
+
+# Render the template with the CSV data
+inventory = template.render(hosts=hosts)
+
+# Save the rendered inventory to a file
+with open('inventory.ini', 'w') as file:
+    file.write(inventory)
