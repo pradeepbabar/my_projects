@@ -1,0 +1,45 @@
+import csv
+import socket
+
+def perform_dns_lookup(ip_address):
+    try:
+        hostname = socket.gethostbyaddr(ip_address)[0]
+        return hostname
+    except socket.herror:
+        return ""
+
+def process_csv_file(input_file, output_file):
+    with open(input_file, 'r') as file:
+        reader = csv.DictReader(file)
+        header = reader.fieldnames
+
+        new_header = ["Primary Hostname", "Primary IP Address", "Secondary IP Address", "Secondary Hostname"]
+        rows = []
+
+        for row in reader:
+            device_name = row["Device Name"]
+            primary_ip = row["IP Address"]
+            ha_pair_status = row["HA Pair Status"]
+
+            primary_hostname = ""
+            primary_ip_address = ""
+            secondary_ip_address = ""
+            secondary_hostname = ""
+
+            if ha_pair_status == "Active":
+                primary_hostname = perform_dns_lookup(primary_ip)
+                primary_ip_address = primary_ip
+                secondary_ip_address = row["Secondary IP Address"]
+                secondary_hostname = perform_dns_lookup(secondary_ip_address)
+
+            rows.append([primary_hostname, primary_ip_address, secondary_ip_address, secondary_hostname])
+
+    with open(output_file, 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(new_header)
+        writer.writerows(rows)
+
+# Example usage
+input_csv_file = "input.csv"
+output_csv_file = "output.csv"
+process_csv_file(input_csv_file, output_csv_file)
