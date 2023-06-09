@@ -1,0 +1,32 @@
+import csv
+
+csv_file = 'inventory.csv'
+inventory_file = 'ansible_inventory.ini'
+
+# Define the columns in the CSV file
+host_column = 'hostname'
+ip_column = 'ip_address'
+username_column = 'username'
+password_column = 'password'
+
+# Read the CSV file
+with open(csv_file, 'r') as file:
+    csv_data = csv.DictReader(file)
+    hosts = []
+    
+    # Iterate over each row in the CSV
+    for row in csv_data:
+        host = {}
+        host['hostname'] = row[host_column]
+        host['ansible_host'] = row[ip_column]
+        host['ansible_user'] = row[username_column]
+        host['ansible_password'] = row[password_column]
+
+        # Add the host to the list
+        hosts.append(host)
+
+# Write the inventory file
+with open(inventory_file, 'w') as file:
+    file.write('[all]\n')
+    for host in hosts:
+        file.write(f"{host['hostname']} ansible_host={host['ansible_host']} ansible_user={host['ansible_user']} ansible_password={host['ansible_password']}\n")
